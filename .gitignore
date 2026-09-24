@@ -11,6 +11,7 @@ ENV/
 *.npy
 *.npz
 Project/Models/
+Project/Old Files/
 
 *.log
 .DS_Store
