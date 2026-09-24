@@ -28,7 +28,7 @@ def normalize(language):
 def is_cyrillic(text):
     return bool(re.search(r'[\u0400-\u04FF]', text))
 
-def cyryllic_filter(language):
+def cyrillic_filter(language):
     filename = os.path.join(LANG_DIR, language + ".txt")
 
     try:
@@ -55,7 +55,7 @@ def cyryllic_filter(language):
 if __name__ == "__main__":
     running = True
 
-    # cyryllic_filter("serbian")
+    # cyrillic_filter("serbian")
 
     while running:
         language = input("Podaj język: ")

@@ -60,7 +60,6 @@ def draw_graph(FRAME_WIDTH, FRAME_HEIGHT, similarity_matrix_np, languages_list, 
 
                         if dist < min_dist:
                             if dist == 0:
-                                import numpy as np
                                 dx, dy = np.random.rand() - 0.5, np.random.rand() - 0.5
                                 dist = math.sqrt(dx ** 2 + dy ** 2)
 
@@ -129,7 +128,7 @@ def draw_heatmap(similarity_matrix_np, languages_list):
     cbar.ax.yaxis.label.set_fontname('serif')
     cbar.ax.yaxis.label.set_size(12)
 
-    os.makedirs("Raports", exist_ok=True)
+    os.makedirs(FIG_DIR, exist_ok=True)
     plt.savefig(os.path.join(FIG_DIR, "heatmap.pdf"), format="pdf", bbox_inches="tight")
     print("Pomyślnie wygenerowano plik: heatmap.pdf")
 

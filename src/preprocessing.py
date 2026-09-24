@@ -9,14 +9,15 @@ LANG_DIR = os.path.join(BASE_DIR, "data")
 
 def generate_datasets(languages, datasets):
     for language in languages:
-        filename = os.path.join(LANG_DIR, language + ".txt")
+        filename = os.path.join(LANG_DIR, f"{language}.txt")
 
         if not os.path.exists(filename):
             print(f"{RED}Plik {filename} nie istnieje.{RESET}")
+            continue
 
         try:
             with open(filename, "r", encoding="utf-8") as file:
-                datasets[language] = [line.strip() for line in file.readlines()]
+                datasets[language] = [line.strip() for line in file]
                 print(f"{GREEN}Wczytano {len(datasets[language])} słów dla: {language}{RESET}")
         except Exception as e:
             print(f"{RED}Wystąpił błąd: {e}{RESET}")

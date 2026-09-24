@@ -1,7 +1,5 @@
 from preprocessing import generate_ngrams
 from numpy import mean, zeros
-from pyexpat import model
-
 
 def words_centroids(language, model, datasets, n):
     dataset = datasets[language]
