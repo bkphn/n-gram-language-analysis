@@ -10,8 +10,8 @@ ENV/
 *.bin
 *.npy
 *.npz
-Project/Models/
-Project/Old Files/
+src/Models/
+src/old/
 
 *.log
 .DS_Store
